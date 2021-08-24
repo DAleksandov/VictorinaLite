@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">org.sqlite.JDBC</property>
+    <property name="connection.url">jdbc:sqlite:victorina.db</property>
+    <property name="dialect">db.SQLiteDialect</property>
+    <property name="generate_statistics">false</property>
+    <property name="current_session_context_class">thread</property>
+    <property name="hbm2ddl.auto">update</property>
+    <property name="show_sql">true</property>
+
+    <mapping class="repository.Victorina" />
+    <mapping class="model.Question" />
+    <mapping class="model.User" />
+
+  </session-factory>
+</hibernate-configuration>
